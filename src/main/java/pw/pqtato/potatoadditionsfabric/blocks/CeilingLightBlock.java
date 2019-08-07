@@ -30,9 +30,9 @@ public class CeilingLightBlock extends Block {
 
     public boolean activate(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult blockHitResult) {
         if (state.get(isLightOn) == true) {
-            world.setBlockState(pos, ModBlocks.CEILING_LIGHT_BLOCK.getDefaultState().with(isLightOn, false));
+            world.setBlockState(pos, ModBlocks.ceilingLightBlock.getDefaultState().with(isLightOn, false));
         } else {
-            world.setBlockState(pos, ModBlocks.CEILING_LIGHT_BLOCK.getDefaultState().with(isLightOn, true));
+            world.setBlockState(pos, ModBlocks.ceilingLightBlock.getDefaultState().with(isLightOn, true));
 
         }
         return true;

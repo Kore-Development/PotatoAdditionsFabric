@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "on=false": { "model":  "potatoadditions:block/ceiling_light_off"},
+    "on=true": { "model":  "potatoadditions:block/ceiling_light"}
+  }
+}

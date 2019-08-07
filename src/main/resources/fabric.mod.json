@@ -1,30 +1,27 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
-  "version": "${version}",
+  "id": "potatoadditions",
+  "version": "1.0.0",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Potato Additions: Fabric",
+  "description": "Random additions created by Pqtato99",
   "authors": [
-    "Me!"
+    "Pqtato99 (thepqtatogalaxy)"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/potato-additions",
+    "sources": "https://github.com/Kore-Development/PotatoAdditionsFabric"
   },
 
-  "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "license": "none",
+  "icon": "assets/potatoadditions/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "pw.pqtato.potatoadditionsfabric.PotatoAdditionsFabricMod"
     ]
   },
-  "mixins": [
-    "modid.mixins.json"
-  ],
 
   "depends": {
     "fabricloader": ">=0.4.0",

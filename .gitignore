@@ -23,3 +23,9 @@ bin/
 # fabric
 
 run/
+
+# diy copy scripts
+
+copy.cmd
+copy_block.cmd
+copy_item.cmd

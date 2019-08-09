@@ -11,6 +11,7 @@ public class ModItems {
     public static final Item iconItem = register("icon", new IconItem());
     public static final Item diyIconItem = register("diy_icon", new DIYIconItem());
     public static final Item currencyIconItem = register("currency_icon", new CurrencyIconItem());
+    public static final Item foodIconItem = register("food_icon", new FoodIconItem());
     public static Item stoneCoinItem;
     public static Item ironCoinItem;
     public static Item goldCoinItem;
@@ -48,6 +49,10 @@ public class ModItems {
     public static Item diyItem28;
     public static Item diyItem29;
     public static Item diyItem30;
+    public static Item chocolateBarItem;
+    public static Item cheeseItem;
+    public static Item crackerItem;
+    public static Item hamburgerItem;
 
     public static Item register(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(Reference.MOD_ID, name), item);
@@ -59,6 +64,8 @@ public class ModItems {
 
     public static void init() {
         System.out.println("Initializing items");
+
+        // Currency
         stoneCoinItem = register("stone_coin", getProperties(ModTabs.currencyItemGroup));
         ironCoinItem = register("iron_coin", getProperties(ModTabs.currencyItemGroup));
         goldCoinItem = register("gold_coin", getProperties(ModTabs.currencyItemGroup));
@@ -66,36 +73,45 @@ public class ModItems {
         ironCoinPieceItem = register("iron_coin_piece", getProperties(ModTabs.currencyItemGroup));
         goldCoinPieceItem = register("gold_coin_piece", getProperties(ModTabs.currencyItemGroup));
         rainbowCoinPieceItem = register("rainbow_coin_piece", getProperties(ModTabs.currencyItemGroup));
-        diyItem1 = register("diyItem1", getProperties(ModTabs.diyItemGroup));
-        diyItem2 = register("diyItem2", getProperties(ModTabs.diyItemGroup));
-        diyItem3 = register("diyItem3", getProperties(ModTabs.diyItemGroup));
-        diyItem4 = register("diyItem4", getProperties(ModTabs.diyItemGroup));
-        diyItem5 = register("diyItem5", getProperties(ModTabs.diyItemGroup));
-        diyItem6 = register("diyItem6", getProperties(ModTabs.diyItemGroup));
-        diyItem7 = register("diyItem7", getProperties(ModTabs.diyItemGroup));
-        diyItem8 = register("diyItem8", getProperties(ModTabs.diyItemGroup));
-        diyItem9 = register("diyItem9", getProperties(ModTabs.diyItemGroup));
-        diyItem10 = register("diyItem10", getProperties(ModTabs.diyItemGroup));
-        diyItem11 = register("diyItem11", getProperties(ModTabs.diyItemGroup));
-        diyItem12 = register("diyItem12", getProperties(ModTabs.diyItemGroup));
-        diyItem13 = register("diyItem13", getProperties(ModTabs.diyItemGroup));
-        diyItem14 = register("diyItem14", getProperties(ModTabs.diyItemGroup));
-        diyItem15 = register("diyItem15", getProperties(ModTabs.diyItemGroup));
-        diyItem16 = register("diyItem16", getProperties(ModTabs.diyItemGroup));
-        diyItem17 = register("diyItem17", getProperties(ModTabs.diyItemGroup));
-        diyItem18 = register("diyItem18", getProperties(ModTabs.diyItemGroup));
-        diyItem19 = register("diyItem19", getProperties(ModTabs.diyItemGroup));
-        diyItem20 = register("diyItem20", getProperties(ModTabs.diyItemGroup));
-        diyItem21 = register("diyItem21", getProperties(ModTabs.diyItemGroup));
-        diyItem22 = register("diyItem22", getProperties(ModTabs.diyItemGroup));
-        diyItem23 = register("diyItem23", getProperties(ModTabs.diyItemGroup));
-        diyItem24 = register("diyItem24", getProperties(ModTabs.diyItemGroup));
-        diyItem25 = register("diyItem25", getProperties(ModTabs.diyItemGroup));
-        diyItem26 = register("diyItem26", getProperties(ModTabs.diyItemGroup));
-        diyItem27 = register("diyItem27", getProperties(ModTabs.diyItemGroup));
-        diyItem28 = register("diyItem28", getProperties(ModTabs.diyItemGroup));
-        diyItem29 = register("diyItem29", getProperties(ModTabs.diyItemGroup));
-        diyItem30 = register("diyItem30", getProperties(ModTabs.diyItemGroup));
+
+        // DIY
+        diyItem1 = register("diy_item_1", getProperties(ModTabs.diyItemGroup));
+        diyItem2 = register("diy_item_2", getProperties(ModTabs.diyItemGroup));
+        diyItem3 = register("diy_item_3", getProperties(ModTabs.diyItemGroup));
+        diyItem4 = register("diy_item_4", getProperties(ModTabs.diyItemGroup));
+        diyItem5 = register("diy_item_5", getProperties(ModTabs.diyItemGroup));
+        diyItem6 = register("diy_item_6", getProperties(ModTabs.diyItemGroup));
+        diyItem7 = register("diy_item_7", getProperties(ModTabs.diyItemGroup));
+        diyItem8 = register("diy_item_8", getProperties(ModTabs.diyItemGroup));
+        diyItem9 = register("diy_item_9", getProperties(ModTabs.diyItemGroup));
+        diyItem10 = register("diy_item_10", getProperties(ModTabs.diyItemGroup));
+        diyItem11 = register("diy_item_11", getProperties(ModTabs.diyItemGroup));
+        diyItem12 = register("diy_item_12", getProperties(ModTabs.diyItemGroup));
+        diyItem13 = register("diy_item_13", getProperties(ModTabs.diyItemGroup));
+        diyItem14 = register("diy_item_14", getProperties(ModTabs.diyItemGroup));
+        diyItem15 = register("diy_item_15", getProperties(ModTabs.diyItemGroup));
+        diyItem16 = register("diy_item_16", getProperties(ModTabs.diyItemGroup));
+        diyItem17 = register("diy_item_17", getProperties(ModTabs.diyItemGroup));
+        diyItem18 = register("diy_item_18", getProperties(ModTabs.diyItemGroup));
+        diyItem19 = register("diy_item_19", getProperties(ModTabs.diyItemGroup));
+        diyItem20 = register("diy_item_20", getProperties(ModTabs.diyItemGroup));
+        diyItem21 = register("diy_item_21", getProperties(ModTabs.diyItemGroup));
+        diyItem22 = register("diy_item_22", getProperties(ModTabs.diyItemGroup));
+        diyItem23 = register("diy_item_23", getProperties(ModTabs.diyItemGroup));
+        diyItem24 = register("diy_item_24", getProperties(ModTabs.diyItemGroup));
+        diyItem25 = register("diy_item_25", getProperties(ModTabs.diyItemGroup));
+        diyItem26 = register("diy_item_26", getProperties(ModTabs.diyItemGroup));
+        diyItem27 = register("diy_item_27", getProperties(ModTabs.diyItemGroup));
+        diyItem28 = register("diy_item_28", getProperties(ModTabs.diyItemGroup));
+        diyItem29 = register("diy_item_29", getProperties(ModTabs.diyItemGroup));
+        diyItem30 = register("diy_item_30", getProperties(ModTabs.diyItemGroup));
+
+        // Food
+        chocolateBarItem = register("chocolate_bar", new ChocolateBarItem());
+        cheeseItem = register("cheese", new CheeseItem());
+        crackerItem = register("cracker", new CrackerItem());
+        hamburgerItem = register("hamburger", new HamburgerItem());
+
         System.out.println("Initialized items");
     }
 

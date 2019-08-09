@@ -6,6 +6,7 @@
   "itemGroup.potatoadditions.potatoadditions": "Potato Additions",
   "itemGroup.potatoadditions.diy": "Potato Additions: DIY",
   "itemGroup.potatoadditions.currency": "Potato Additions: Currency",
+  "itemGroup.potatoadditions.food": "Potato Additions: Food",
   
   "item.potatoadditions.stone_coin": "Stone Coin",
   "item.potatoadditions.iron_coin": "Iron Coin",
@@ -78,5 +79,8 @@
 
   "item.potatoadditions.icon": "Icon",
   "item.potatoadditions.diy_icon": "DIY Icon",
-  "item.potatoadditions.currency_icon": "Currency Icon"
+  "item.potatoadditions.currency_icon": "Currency Icon",
+  "item.potatoadditions.food_icon": "Food Icon",
+
+  "item.potatoadditions.chocolate_bar": "Chocolate Bar"
 }

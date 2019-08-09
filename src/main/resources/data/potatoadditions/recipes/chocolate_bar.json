@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "C C",
+        "CMC",
+        "C C"
+    ],
+    "key": {
+        "M": {
+            "item": "minecraft:milk_bucket"
+        },
+        "C": {
+            "item": "minecraft:cocoa_beans"
+        }
+    },
+    "result": {
+        "item": "potatoadditions:chocolate_bar",
+        "count": 3
+    }
+}

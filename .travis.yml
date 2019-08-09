@@ -1,18 +1,14 @@
 language: java
 before_deploy:
   - mv ./build/libs/*.jar ./jar
-  - cd ./jar
-  - rm -rf ./*-sources-dev.jar
-  - rm -rf ./*-dev.jar
-  - rm -rf ./*-sources.jar
 deploy:
-  provider: pages
+  provider: releases
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
-  on:
-    branch: master
+  file_glob: true
+  file: jar/*
 after_deploy:
-  - cd ..
+  - rm -rf ./build
 install: skip
 before_script:
   - rm -rf ./build

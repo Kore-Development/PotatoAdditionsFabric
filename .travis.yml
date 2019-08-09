@@ -1,0 +1,14 @@
+language: java
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  on:
+    branch: master
+install: skip
+before_script:
+  - rm -rf ./build
+script:
+  - ./gradlew build
+after_script:
+  - mv ./build/libs/*.jar ./jar

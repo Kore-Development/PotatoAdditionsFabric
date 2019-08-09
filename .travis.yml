@@ -12,3 +12,5 @@ script:
   - ./gradlew build
 after_script:
   - mv ./build/libs/*.jar ./jar
+jdk: oraclejdk8
+os: linux

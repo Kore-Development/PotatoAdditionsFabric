@@ -9,10 +9,28 @@ import java.net.URL;
 public class UpdateChecker {
     public static String checkForUpdate() {
 
-        String[] currentVersion = Reference.VERSION.split("\\.");
-        String[] latestVersion = getVersion().split("\\.");
+        // Work in Progress
 
-        return currentVersion[0]+currentVersion[1]+currentVersion[2]+latestVersion[0]+latestVersion[1]+latestVersion[2];
+        String currentVersion = "";
+        String latestVersion = "";
+
+        // Adding - and then anything will be ignored
+        // Example: 1.0.0-STABLE will ignore -STABLE so then it will be 1.0.0
+        String[] currentVersionArray = (Reference.VERSION.indexOf("-") >= 0) ? Reference.VERSION.split("-")[0].split("\\.") : Reference.VERSION.split("\\.");
+        String[] latestVersionArray = (getVersion().indexOf("-") >= 0) ? getVersion().split("-")[0].split("\\.") : getVersion().split("\\.");
+
+        // Will change to compare versions
+        for(int i = 0; i < currentVersionArray.length; i++)
+            currentVersion += currentVersionArray[i]+'.';
+        currentVersion = currentVersion.substring(0,(currentVersion.length() - 1));
+
+        for(int i = 0; i < latestVersionArray.length; i++)
+            latestVersion += latestVersionArray[i]+'.';
+        latestVersion = latestVersion.substring(0,(latestVersion.length() - 1));
+
+
+        // When status is added status will be either "UP_TO_DATE" or "OUTDATED"
+        return "\nCurrent version: "+currentVersion+"\nLatest version: "+latestVersion+"\n";
     }
 
     public static String getVersion() {

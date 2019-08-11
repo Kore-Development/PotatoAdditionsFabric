@@ -7,9 +7,7 @@ import pw.pqtato.potatoadditionsfabric.updatechecker.UpdateChecker;
 
 public class PotatoAdditionsFabricMod implements ModInitializer {
 
-	public static final Logger LOGGER = LogManager.getLogger();
-        
-        @Override
+	@Override
 	public void onInitialize() {
 		ModTabs.init();
 		ModBlocks.init();
@@ -17,7 +15,7 @@ public class PotatoAdditionsFabricMod implements ModInitializer {
 
 		String modUpdateMessage = ModUpdateNotifier.getUpdateMessage();
 		if (modUpdateMessage == null) {} else {
-			LOGGER.info(modUpdateMessage);
+			System.out.println(modUpdateMessage);
 		}
 	}
 }

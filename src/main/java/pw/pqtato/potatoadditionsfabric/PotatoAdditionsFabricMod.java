@@ -12,6 +12,10 @@ public class PotatoAdditionsFabricMod implements ModInitializer {
 		ModTabs.init();
 		ModBlocks.init();
 		ModItems.init();
-		System.out.println(UpdateChecker.checkForUpdate());
+
+		String modUpdateMessage = ModUpdateNotifier.getUpdateMessage();
+		if (modUpdateMessage == null) {} else {
+			System.out.println(modUpdateMessage);
+		}
 	}
 }
